@@ -1,3 +1,12 @@
+/*A partire dal codice realizzato nell’esercizio precedente realizzate
+una classe "archivio" contenente un metodo che restituisce un
+array di libri che corrispondono ad una certa stringa.
+L’array in cui eseguire la ricerca è caricato in una variabile nella
+stassa classe tramite il costruttore.
+Il singolo libro può essere a sua volta rappresentato da una classe
+Libro con i quattro attributi necessari, specificati nella consegna
+del progetto.*/
+
 // Import stylesheets
 import './style.css';
 
@@ -19,7 +28,7 @@ class Archivio{
 }
 
 const AutoriTitoli=[];
-let stringa= 'di';
+let stringa= 'ma';
 
 AutoriTitoli[AutoriTitoli.length]=new Archivio ("Dante Alighieri","La Divina Commedia");
 AutoriTitoli[AutoriTitoli.length]=new Archivio ("Italo Svevo","Senilità");
@@ -28,7 +37,10 @@ AutoriTitoli[AutoriTitoli.length]=new Archivio ("Manzoni","I promessi sposi");
 
 AutoriTitoli.forEach((singoloLibro) => singoloLibro.trovaLibri(stringa));
 
-libriTrovati.forEach((singoloLibro)=> console.log(singoloLibro["titolo"] + singoloLibro["autore"]));
+libriTrovati.forEach((singoloLibro)=> console.log( "Titolo: " + singoloLibro["titolo"] + " Autore: " + singoloLibro["autore"]));
 
-console.log("ciao");
+if(libriTrovati.length===0){
+  console.log("Nessun libro corrisponde alla ricerca");
+}
+
 
