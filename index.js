@@ -28,7 +28,7 @@ class Archivio{
 }
 
 const AutoriTitoli=[];
-let stringa= 'ma';
+let stringa= 'di';
 
 AutoriTitoli[AutoriTitoli.length]=new Archivio ("Dante Alighieri","La Divina Commedia");
 AutoriTitoli[AutoriTitoli.length]=new Archivio ("Italo Svevo","Senilità");
